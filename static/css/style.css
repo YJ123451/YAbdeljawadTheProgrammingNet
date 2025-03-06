@@ -5,7 +5,7 @@ html {
 }
 body{
 background-color: deepskyblue; color : white;
-font-family: 'Ojuju', sans-serif; 
+font-family: 'Arial', sans-serif; 
 /* background-image: url('images/background.jpeg'); */
 }
 
@@ -49,6 +49,7 @@ font-family: 'Ojuju', sans-serif;
   margin-right: 0%;
 } */
 .about{
+  padding-top:5px ;
   margin-top: 5%;
   margin-left: 5%;
 }

@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width">
   <title>The Programming Net</title>
   
-  <link href="reset.css" rel="stylesheet" type="text/css" />
-  <link href="reset-webview.css" rel="stylesheet" type="text/css" />
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="{{url_for('static',filename= 'css/reset.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{url_for('static',filename= 'css/reset-webview.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{url_for('static',filename= 'css/style.css')}}" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
@@ -18,10 +19,10 @@
 <body>
   <div class = "navbar">
     <ul>
-     <li> <a href = "/"<p id = "title"><b>The Programming Net</b></p></a></li>
+      <li><a href="/"><p id="title"><b>The Programming Net</b></p></a></li>
       <li><a href="/signup">Log in/Sign up</a></li>
       <li><a href="/services">Services</a></li>
-      <li><a href="/About.html">About</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
        <li ><button id="theme-button" class = "button-17">Toggle Dark Mode</button></li>
 
     </ul>
@@ -31,7 +32,7 @@
    
   <h2>A social media network connecting programmers across the world</h2>
      <p style = width:75%;>Connect with programmers all over the world and learn to work in teams, communicate on projects, and share code!</p>
-<img width = "600" height = "400" src ="images/DALL·E 2024-04-20 15.36.07 - Create a clipart style illustration that's programming themed for a website background. The artwork should include a minimalist and appealing design t.webp">
+<img width = "600" height = "400" src ="{{url_for('static', filename = 'images/home.jpg')}}">
  </div>
 <div class = "flex-container">
    <h2>I don't really know how to code, can I still sign up? </h2>
@@ -90,12 +91,12 @@
         <!-- button here (stretch feature) -->
         <button id = "Close-Modal" type = "button" class = "button-17">Close</button>
       </div>
-      <img width = 300 height = 200 src = "images/thumbs up.jpeg" id = "modal-image" alt = "Rotating Image"/>
+      <img width = 300 height = 200 src = "{{url_for('static',filename ='images/thumbs up.jpeg')}}" id = "modal-image" alt = "Rotating Image"/>
       <!-- image here-->
     </div>
 
   </div>
-  <script src="index.js"></script>
+  <script src="{{url_for('static',filename= 'js/index.js')}}"></script>
 </body>
 
 </html>

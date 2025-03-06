@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let newSignature = document.createElement("p");
     newSignature.textContent = `🖊️ ${person.name} from ${person.hometown}  supports this.`;
     signatures.appendChild(newSignature);
+    
 
     let counter = document.getElementById("counter");
     counter.remove();
