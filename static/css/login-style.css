@@ -1,0 +1,288 @@
+
+html {
+    height: 100%;
+    width: 100%;
+  }
+  body{
+  background-color: deepskyblue; color : white;
+  font-family: 'Arial', sans-serif; 
+  /* background-image: url('images/background.jpeg'); */
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+    width: auto;
+    padding-top: 10px;
+    margin-top: 5%;
+    text-align:center;
+  }
+  
+  /* .flex-container > div {
+   max-width: 40%;
+  } */
+  .petition-container{
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+    width:auto;
+    padding-bottom: 50px;
+    margin-left: 5%;
+  }
+  .petition-para{
+    width: 55%;
+    padding-right: 10px;
+  }
+  .signatures{
+    width: 45%;
+    padding-right: 10px;
+  }
+  .p{
+   width: 50%;
+  }
+  /* .header{
+    margin-left: 5%;
+    padding-left:5%;
+    margin-right: 0%;
+  } */
+  .about{
+    padding-top:5px ;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  .h2{
+    margin-right: 0%;
+    margin-top:0;
+  }
+  #title{
+    padding-right:10%;
+    margin-left:3%;
+    text-align: center;
+    
+  }
+  #header-left{
+   margin-left: 50%;
+   padding: 10% 10% 10% 10%;
+  }
+  
+  /* #header-img{
+  
+  } */
+  .navbar ul{
+    margin-top: 0px;
+    list-style-type: none;
+    flex: none;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    position:fixed;
+    padding: 14px;
+   
+  }
+  .navbar ul li {
+    float: left;
+    margin: 0 10px;
+  }
+  .navbar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+  }
+  .navbar ul li a:hover {
+    background-color: black;
+  }
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  /* .header-button{
+  
+  } */
+  a:link{
+    color: blue;
+    text-decoration-color: green;
+  }
+  a:visited{
+    color: purple;
+    text-decoration-color: green;
+  }
+  a:hover{
+    color: red;
+    text-decoration-color: green;
+  }
+  .button-17{
+   
+    cursor: pointer;
+  }
+  .footer {
+    position: sticky;
+    padding-top: 10px;
+    left: 0;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    margin-top: 1%;
+  }
+  
+  .button-17 {
+    margin-bottom: 0;
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    height: 36px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 6px 16px;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+  }
+  
+  .button-17:hover {
+    background: #d4d6d8;
+    color: #0a0a0b;
+  }
+  
+  .button-17:active {
+    box-shadow: 0px 0px 20px 10px rgba(255, 0, 0, 0.7);
+    outline: none;
+    border:none;
+    transition: box-shadow 0.3s ease; 
+  }
+  
+  
+  .button-17:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+  }
+  
+  .button-17:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  .button-17:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+  }
+  
+  .button-17:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  .button-17:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+  }
+  
+  .button-17:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  @media (max-width: 768px) {
+    .flex-container{
+      padding-left: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .error {
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    background:pink;
+  }
+  .revealable{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 2s ease;;
+  }
+  .revealable.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+  .modal {
+    display: none; /* hides the modal from view by default*/
+    position: fixed; /* keeps the modal in one place */
+    z-index: 2; /* positions the modal on top of all other elements on the screen */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.4); /* 40% opacity black - other elements can still be seen */
+    flex-direction: column; /* these flexbox rules center the content on the screen */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* box that contains all the content and images */
+  .modal-content {
+    background-color: lightsteelblue; /* update the colors and font sizes as you like */
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    display: flex; /* adds flexbox to center all items */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #thanks-modal-content {
+    width: 20rem; /* sets a default width for the text container */
+  }
+  
+  #modal-text-container {
+    display: flex; /* adds flexbox to center the text and buttons (stretch feature) */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @keyframes rotateImage {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  #modal-image{
+    animation: rotateImage 1s linear infinite;
+  }
+  
+  
+
+form{
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #loginform{
+   place-items: center;
+    display: grid;
+    
+  }

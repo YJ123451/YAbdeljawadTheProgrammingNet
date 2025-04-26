@@ -1,0 +1,327 @@
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .navbar{
+    width: 100%;
+  }
+  body {
+    background-color: deepskyblue;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  }
+  
+  /* Layout Components */
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5% auto 10%;
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  .petition-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: auto;
+    padding-bottom: 50px;
+    margin-left: 5%;
+  }
+  
+  .petition-para {
+    width: 55%;
+    padding-right: 10px;
+  }
+  
+  .signatures {
+    width: 45%;
+    padding-right: 10px;
+  }
+  
+  .about {
+    width: 50%;
+    padding-top: 5px;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  
+  .team-member-container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 60px;
+  }
+  
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .Team-Member-img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .socials{
+    margin-top: 15px;
+  }
+  
+  .linkedin-logo{
+    width: 30px;
+    height: 30px;
+    transition: transorm 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .linkedin-logo:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+  }
+  
+  
+  
+  
+  
+  #title {
+    padding-right: 10%;
+    margin-left: 3%;
+    text-align: center;
+  }
+  
+  /* Navigation */
+  .navbar ul {
+    margin-top: 0;
+    list-style-type: none;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    padding: 14px;
+  }
+  
+  .navbar ul li {
+    float: left;
+    margin: 0 10px;
+  }
+  
+  .navbar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+  }
+  
+  .navbar ul li a:hover {
+    background-color: black;
+  }
+  
+  /* Links */
+  a:link {
+    color: blue;
+    text-decoration-color: green;
+  }
+  
+  a:visited {
+    color: purple;
+    text-decoration-color: green;
+  }
+  
+  a:hover {
+    color: red;
+    text-decoration-color: green;
+  }
+  
+ 
+  .footer-container{
+    width: 100%;
+    padding: 70px 30px 20px;
+  }
+  footer{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+  }
+  .socialIcons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .socialIcons a{
+    text-decoration: none;
+    padding: 10x;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+  }
+
+  .socialIcons a i{
+    font-size:2em;
+    color: black;
+    opacity: 0.9;
+  }
+
+  .socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+  }
+
+ .socialIcons a:hover i{
+        color: white;
+        transition: 0.5s;
+    }
+
+.footerNav ul{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+.footerNav ul li a{
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+  
+  /* Button Styles */
+  .button-17 {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    height: 36px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 6px 16px;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform, opacity;
+    z-index: 0;
+    margin-bottom: 0;
+  }
+  
+  .button-17:hover {
+    background: #d4d6d8;
+    color: #0a0a0b;
+  }
+  
+  .button-17:active {
+    box-shadow: 0px 0px 20px 10px rgba(255, 0, 0, 0.7);
+    outline: none;
+    border: none;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .button-17:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+  }
+  
+  .button-17:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  .button-17:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+  }
+  
+  .button-17:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  .button-17:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+  }
+  
+  .button-17:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  /* Utility Classes */
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  
+  .error {
+    border: 2px solid red;
+    background: pink;
+  }
+  
+  /* Animation and Effects */
+  .revealable {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+  
+  .revealable.active {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+ 
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .flex-container {
+      padding-left: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footerNav ul{
+        flex-direction: column;
+    }
+    .footerNav ul li a{
+       width: 100%;
+       text-align: center;    
+       margin: 10px;
+    }
+  }
