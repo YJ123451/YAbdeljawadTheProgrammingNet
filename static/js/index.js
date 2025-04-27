@@ -7,18 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     themeButton.addEventListener("click", toggleDarkMode);
 
     // Open Stack Overflow
-    let stackButton = document.getElementById("Stack");
-    const stack = () => {
-      window.open("https://stackoverflow.com/");
-    }
-    stackButton.addEventListener("click", stack);
-
-    // Open Codepath
-    let CodePathButton = document.getElementById("Codepath");
-    function cp() {
-      window.open("https://www.codepath.org/");
-    }
-    CodePathButton.addEventListener("click", cp);
+    
 
     // Signature Form
     let count = 3;
@@ -26,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const addSignature = (person) => {
     // let name = person.name.value;
     // let hometown = document.getElementById("hometown").value;
-    // let signatures = document.getElementById("signatures");
+    let signatures = document.getElementById("signatures");
     let newSignature = document.createElement("p");
     newSignature.textContent = `🖊️ ${person.name} from ${person.hometown}  supports this.`;
     signatures.appendChild(newSignature);

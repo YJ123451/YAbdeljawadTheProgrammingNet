@@ -6,6 +6,7 @@ html {
   body{
   background-color: deepskyblue; color : white;
   font-family: 'Arial', sans-serif; 
+  
   /* background-image: url('images/background.jpeg'); */
   }
   
@@ -15,10 +16,13 @@ html {
     justify-content: center;
     align-items: center;
     margin: 10% auto;
-    width: auto;
+    width: 50%;
     padding-top: 10px;
     margin-top: 5%;
     text-align:center;
+    border: none;
+    border-radius: 10px;
+ 
   }
   
   /* .flex-container > div {
@@ -119,16 +123,7 @@ html {
    
     cursor: pointer;
   }
-  .footer {
-    position: sticky;
-    padding-top: 10px;
-    left: 0;
-    bottom: 0%;
-    width: 100%;
-    text-align: center;
-    background-color: black;
-    margin-top: 1%;
-  }
+
   
   .button-17 {
     margin-bottom: 0;
@@ -225,64 +220,55 @@ html {
     opacity: 1;
   }
   
-  .modal {
-    display: none; /* hides the modal from view by default*/
-    position: fixed; /* keeps the modal in one place */
-    z-index: 2; /* positions the modal on top of all other elements on the screen */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0,0,0,0.4); /* 40% opacity black - other elements can still be seen */
-    flex-direction: column; /* these flexbox rules center the content on the screen */
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* box that contains all the content and images */
-  .modal-content {
-    background-color: lightsteelblue; /* update the colors and font sizes as you like */
-    color: black;
-    text-align: center;
-    font-size: 3rem;
-    display: flex; /* adds flexbox to center all items */
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #thanks-modal-content {
-    width: 20rem; /* sets a default width for the text container */
-  }
-  
-  #modal-text-container {
-    display: flex; /* adds flexbox to center the text and buttons (stretch feature) */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  @keyframes rotateImage {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  #modal-image{
-    animation: rotateImage 1s linear infinite;
-  }
-  
   
 
 form{
-    width: 300px;
+    width: 100%;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
   
+
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group p {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+
+
+
   #loginform{
    place-items: center;
     display: grid;
     
   }
+  @media (max-width: 700px) {
+    .flex-container {
+      padding-left: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

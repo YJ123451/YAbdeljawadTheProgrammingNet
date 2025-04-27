@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block head %}
+  <link href="{{ url_for('static', filename='css/login-style.css') }}" rel="stylesheet">
+  <title>Sign up</title>
+  {% endblock %}
+  
+  {% block content %}
+  <div class="flex-container">
+    <h2 style = "margin-bottom: 20px;">Welcome to The Programming Net!</h2>
+    <form method="POST" action="/register">
+      {{ form.hidden_tag() }}
+      <div class =  "form-group">
+        <p>First Name:</p>
+        {{ form.first_name(class="form-input") }}
+        </div>
+      <div class="form-group">
+        <p>Email:</p>
+        {{ form.email(class="form-input") }}
+      </div>
+      <div class="form-group">
+        <p>Password:</p>
+        {{ form.password(class="form-input") }}
+      </div>
+      
+      <div class = "form-group">
+        <p>Confirm Password:</p>
+        {{ form.confirm_password(class="form-input") }}
+      </div>
+      {{ form.submit(class="button-17") }}
+    </form>
+  </div>
+</body>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{url_for('static',filename= 'js/login.js')}}"></script>
+{% endblock %}
