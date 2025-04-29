@@ -88,6 +88,46 @@ body {
   transform: scale(1.2); /* Slightly enlarge on hover */
 }
 
+/* static/css/custom.css */
+
+/* Make alerts slightly rounded and padded */
+.alert {
+  border-radius: 8px;
+  padding: 15px 20px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Customize individual alert types */
+.alert-success {
+  background-color: #d1f7d6;
+  color: #155724;
+  border: 1px solid #a3e4b0;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.alert-info {
+  background-color: #cff4fc;
+  color: #055160;
+  border: 1px solid #b6effb;
+}
+
+/* Style the close button */
+.alert .btn-close {
+  filter: invert(50%);
+}
 
 
 
