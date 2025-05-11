@@ -1,10 +1,12 @@
 <div class="navbar">
-    <ul>
-      <li><a href="/"><p id="title"><b>The Programming Net</b></p></a></li>
-      <li><a href="/register">Create Account</a></li>
-      <li><a href="/login">Log in</a></li>
-      <li><a href="{{ url_for('about') }}">About</a></li>
-      <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
-      <li><button id="theme-button" class="button-17">Toggle Dark Mode</button></li>
-    </ul>
-  </div>
+  <ul>
+    <li><a href="/"><p id="title"><b>The Programming Net</b></p></a></li>
+    <li><a href="/register">Create Account</a></li>
+    <li><a href="/login">Log in</a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+    <li> <a href = "{{url_for('roadmap') }}">Roadmap</a></li>
+    <li><a href = "{{url_for('feedback') }}">Feedback</a></li>
+    <li><button id="theme-button" class="button-17">Toggle Dark Mode</button></li>
+  </ul>
+</div>

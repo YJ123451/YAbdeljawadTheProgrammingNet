@@ -1,4 +1,5 @@
 import smtplib
+from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
@@ -63,6 +64,18 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[InputRequired(), Length(min=6, max=35)], render_kw={'placeholder': 'Password'})
     submit = SubmitField('Login')
 
+class Feedback(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=True)
+    email = db.Column(db.String(120), nullable=True)
+    rating = db.Column(db.Integer, nullable=False)
+    category = db.Column(db.String(50), nullable=False)
+    comments = db.Column(db.Text, nullable=False)
+    subscribe = db.Column(db.Boolean, default=False)
+    submitted_at = db.Column(db.DateTime, default=datetime.now)
+    
+    def __repr__(self):
+        return f'<Feedback {self.id} from {self.name}>'
 # Checks to see if the email has already been registered
 
 
@@ -94,7 +107,7 @@ def register():
     password = form.password.data
     confirm_password = form.confirm_password.data
     email = form.email.data
-    
+
     existing_user = User.query.filter_by(email=form.email.data).first()
 
     if existing_user:
@@ -113,7 +126,7 @@ def register():
                 db.session.commit()
                 flash('Registration successful! Please log in.', 'success')
                 return redirect(url_for('login'))
-   
+
     return render_template('register.html', form=form)
 
 @app.route('/login', methods =['GET','POST'])
@@ -128,7 +141,7 @@ def login():
             return redirect(url_for('dashboard'))
         else:
             flash('Invalid email or password', 'danger')
-    
+
 
 
     redirect(url_for('dashboard'))
@@ -143,7 +156,13 @@ def dashboard():
             flash('Please log in to access the dashboard.', 'danger')
             return redirect(url_for('login'))
         return render_template('dashboard.html', name=current_user.first_name)
-   
+
+
+
+@app.route('/roadmap')
+def roadmap():
+    return render_template('roadmap.html')
+
 @app.route('/logout')
 @login_required
 def logout():
@@ -151,10 +170,51 @@ def logout():
     flash('You have been logged out.', 'success')
     return redirect(url_for('login'))
 
+@app.route('/feedback', methods=['GET', 'POST'])
+def feedback():
+    if request.method == 'POST':
+        name = request.form.get('name', 'Anonymous')
+        email = request.form.get('email', '')
+        rating = request.form.get('rating')
+        category = request.form.get('category')
+        comments = request.form.get('comments')
+        subscribe = 'subscribe' in request.form
+        
+        # Validation
+        if not rating or not category or not comments:
+            flash('Please fill in all required fields', 'error')
+            return redirect(url_for('feedback'))
+        
+        try:
+            # Create new feedback record
+            new_feedback = Feedback(
+                name=name,
+                email=email,
+                rating=rating,
+                category=category,
+                comments=comments,
+                subscribe=subscribe,
+                submitted_at=datetime.now()
+            )
+            db.session.add(new_feedback)
+            db.session.commit()
+            
+            flash('Thank you for your feedback!', 'success')
+            return redirect(url_for('feedback_thank_you'))
+        except Exception as e:
+            db.session.rollback()
+            flash('An error occurred while submitting your feedback', 'error')
+            return redirect(url_for('feedback'))
+    
+    # If GET request, just show the form
+    return render_template('feedback.html')
+
+@app.route('/feedback/thank-you')
+def feedback_thank_you():
+    return render_template('feedback_thanks.html')
 
 
 
 
-
-if __name__ == '__main__': 
+if __name__ == '__main__':
     app.run(debug = True)

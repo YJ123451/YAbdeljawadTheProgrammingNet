@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     themeButton.addEventListener("click", toggleDarkMode);
 
-    // Open Stack Overflow
     
 
     // Signature Form

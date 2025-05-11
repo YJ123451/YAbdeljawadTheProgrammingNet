@@ -4,4 +4,4 @@ document.addEventListener('DOMContentLoaded', function () {
       var element = document.body;
       element.classList.toggle("dark-mode");
     }
-    themeButton.addEventListener("click", toggleDarkMode);
+    themeButton.addEventListener("click", toggleDarkMode);})

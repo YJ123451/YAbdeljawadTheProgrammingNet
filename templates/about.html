@@ -9,8 +9,9 @@
 {% block content %}
 <section class="about">
   <h2 style = "margin-bottom: 10px;"><b>About Us</b></h2>
-  <p class="p" style="width: 75%; margin-bottom: 10px;" >
-    Founded in 2024 in New York City, The Programming Net is a non-profit...
+  <p class="p" style="width: 90%; margin-bottom: 10px;" >
+    Founded in 2024 in New York City, The Programming Net is a non-profit organization looking <br> to connect programmers and businesses from all over the world.<br> Our mission is to spread creativity to all walks of life. <br>Thank you for your support!
+
   </p>
   <h2><b>Our Team:</b></h2>
   <div class="team-member-container">
@@ -18,16 +19,18 @@
       <img class="Team-Member-img" src="{{ url_for('static', filename='images/myself.jpg') }}" width="20%" height="15%">
       <h3>Yousif</h3>
       <p>Lead Developer & Founder</p>
-      <a href="https://www.linkedin.com/in/yousif-abdeljawad-9479b51a4/" target="_blank"></a>
+      <a href="https://www.linkedin.com/in/yousif-abdeljawad-9479b51a4/" target="_blank">
       <img src="{{ url_for('static', filename='images/linked_in.jpg') }}" alt="LinkedIn" class="linkedin-logo">
+      </a>
     </div>
 
     <div class="team-member">
       <img class="Team-Member-img" src="{{ url_for('static', filename='images/shawn.jpg') }}" width="20%" height="15%">
       <h3>Shawn</h3>
       <p>Picked up off the street</p>
-      <a href="https://www.linkedin.com/in/shawn-nosikovsky/" target="_blank"></a>
+      <a href="https://www.linkedin.com/in/shawn-nosikovsky/" target="_blank">
       <img src="{{ url_for('static', filename='images/linked_in.jpg') }}" alt="LinkedIn" class="linkedin-logo">
+      </a>
     </div>
   </div>
 </section>

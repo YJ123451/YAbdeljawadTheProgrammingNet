@@ -1,0 +1,85 @@
+<!-- HTML for the feedback form template (feedback.html) -->
+{% extends 'base.html' %}
+
+{% block title %}Feedback - The Programming Net{% endblock %}
+
+{% block head %}
+  <link href="{{ url_for('static', filename='css/feedback.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+<div class="feedback-container">
+  <h2>We Value Your Feedback</h2>
+  <p class="feedback-intro">Your thoughts help us improve The Programming Net experience for everyone. Please take a moment to share your feedback with us.</p>
+  
+  <!-- Flash messages section -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="flash-message {{ category }}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  
+  <form id="feedback-form" method="POST" action="{{ url_for('feedback') }}">
+    <div class="form-group">
+      <label for="name">Name (optional)</label>
+      <input type="text" id="name" name="name" placeholder="Your name">
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email (optional)</label>
+      <input type="email" id="email" name="email" placeholder="Your email">
+    </div>
+    
+    <div class="rating-container">
+      <label>Please rate our website:</label>
+      <div class="star-rating">
+        <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent"></label>
+        <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Very Good"></label>
+        <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Good"></label>
+        <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Fair"></label>
+        <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Poor"></label>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="category">What aspect are you commenting on?</label>
+      <select id="category" name="category" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="design">Website Design</option>
+        <option value="usability">Usability</option>
+        <option value="content">Content Quality</option>
+        <option value="features">Features & Functionality</option>
+        <option value="community">Community Experience</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="comments">Comments (max 2000 characters):</label>
+      <textarea id="comments" name="comments" maxlength="2000" rows="5" required></textarea>
+      <div class="char-counter"><span id="char-count">0</span>/2000</div>
+    </div>
+    
+    <div class="form-group">
+      <label class="checkbox-container">
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <span class="checkmark"></span>
+        I'd like to receive updates on how my feedback improves the site
+      </label>
+    </div>
+    
+    <button type="submit" class="button-17">Submit Feedback</button>
+  </form>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="{{ url_for('static', filename='js/feedback.js') }}"></script>
+{% endblock %}
+

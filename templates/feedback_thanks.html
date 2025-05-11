@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Thank You - The Programming Net{% endblock %}
+
+{%block head%}
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <title>Thank You for Your Feedback</title>
+{% endblock %}
+
+{% block navbar %}
+  {% include 'navbar.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="thank-you-container">
+  <div class="thank-you-content">
+    <h1>Thank You for Your Feedback!</h1>
+    
+    <!-- <div class="thank-you-image">
+      <img src="{{ url_for('static', filename='images/thank-you.png') }}" alt="Thank you illustration"> -->
+    </div>
+    
+    <p>We truly appreciate you taking the time to share your thoughts with us. Your feedback helps us improve The Programming Net for everyone in our community.</p>
+    
+    <p>Our team reviews all feedback regularly, and we're committed to making continuous improvements based on what we hear from users like you.</p>
+    
+    {% if session.get('subscribed_to_updates') %}
+      <div class="updates-message">
+        <p>You've subscribed to updates! We'll let you know when we implement changes based on community feedback.</p>
+      </div>
+    {% endif %}
+    
+    <div class="action-buttons">
+      <a href="{{ url_for('index') }}" class="button-17">Return to Homepage</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    // Simple animation for the thank you page
+    document.addEventListener('DOMContentLoaded', function() {
+      const content = document.querySelector('.thank-you-content');
+      if (content) {
+        content.classList.add('fade-in');
+      }
+    });
+  </script>
+{% endblock %}

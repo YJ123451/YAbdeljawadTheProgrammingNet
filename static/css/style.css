@@ -139,6 +139,10 @@ body {
 }
 
 /* Navigation */
+.navbar{
+  margin-bottom: 50 px;
+  padding-bottom: 50px;
+}
 .navbar ul {
   margin-top: 0;
   list-style-type: none;

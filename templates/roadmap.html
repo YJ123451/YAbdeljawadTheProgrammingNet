@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block head %}
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <title>Roadmap</title>
+  {% endblock %}
+ {%block content%}
+ <body>
+    <div class = "flex-container">
+ <h1>This part is loading.....</h1>
+ </div>
+</body>
+ {% endblock %}
+  {% block script %}
+  <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+  {% endblock %}
